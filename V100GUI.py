@@ -1,8 +1,10 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
+import os
 import time
 import csv
+from PyQt5 import QtCore, QtGui, QtWidgets
 import pandas as pd
-import os
+import numpy as np
+
 from google.analytics.data_v1beta import BetaAnalyticsDataClient
 from google.analytics.data_v1beta.types import (
     DateRange,
@@ -11,14 +13,6 @@ from google.analytics.data_v1beta.types import (
     MetricType,
     RunReportRequest
 )
-import numpy as np
-from google.analytics.data_v1beta import BetaAnalyticsDataClient
-from google.analytics.data_v1beta.types import DateRange
-from google.analytics.data_v1beta.types import Dimension
-from google.analytics.data_v1beta.types import Metric
-from google.analytics.data_v1beta.types import RunReportRequest
-from google.analytics.data_v1beta.types import OrderBy
-
 userInput = []
 
 class Ui_MainWindow(object):
